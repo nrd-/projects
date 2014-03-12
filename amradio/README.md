@@ -5,8 +5,8 @@ jQuery plugin for streaming audio.
 Usage:
 	
     $('#AMradio').nrdRadio({
-					station: 	'A.M. Radio',
-					audioSrc: 	'http://some_stream.no-ip.org:8000/listen',
-					artwork: 	'img/powerOn.png',
-					controls: 	controls
+					station: 	'Some Radio Station',
+					audioSrc: 	'http://some_stream_host.com:some_port/listen',
+					artwork: 	'img/some_artwork.png',
+					controls: 	your_control_var
     });

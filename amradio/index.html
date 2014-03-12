@@ -34,23 +34,21 @@
 		<link rel="apple-touch-startup-image" href="assets/iosSplash.png">
 		
 		<!-- CSS -->
-		<link rel='stylesheet/less' type='text/css' href='css/nrd.radio.less'/>
+		<link rel='stylesheet/less' type='text/css' href='css/nrd.amradio.less'/>
 
 		<!-- jQuery -->
 		<script src="js/jquery.js"></script>
-		
-		<!-- Frameworks -->
-		<script type="text/javascript" src="js/knockout.js"></script>
 
 		<!-- nrd -->
 		<script type="text/javascript" src="js/nrd.js"></script>
-		<script type="text/javascript" src="js/nrd.radio.js"></script>
+		<script type="text/javascript" src="js/nrd.amradio.js"></script>
 		<script type="text/javascript">
 			var initRadio = function(){
-				$('#AMradio').nrdRadio({
+				$('#AMradio').amRadio({
 					showDetails: 	false,
-					audioSrc: 		'http://your_stream.com:your_port/listen',
-					artwork: 		'img/your_station_artwork.png',
+					audioSrc: 		'http://amradio.no-ip.org:8011/listen',
+					playBtn: 		'img/powerOff.png',
+					stopBtn: 		'img/powerOn.png',
 					autoPlay: 		false
 				});
 			}
