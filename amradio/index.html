@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>[AMradio]</title>
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="HandheldFriendly" content="True">
+		<!-- <meta name="MobileOptimized" content="320"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-title" content="[A.M. radio]">
+		<META name="apple-mobile-web-app-capable" content="yes">
+		<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=UTF-8">
+		<META NAME="COPYRIGHT" CONTENT="0-&copy; 2011">
+		<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+		<META HTTP-EQUIV="CONTENT-LANGUAGE" CONTENT="en-US">
+		<META NAME="DESCRIPTION" CONTENT="[AMradio]">
+		<META HTTP-EQUIV="EXPIRES" CONTENT="0">
+		<META NAME="KEYWORDS" CONTENT="">
+		<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+		<META NAME="ROBOTS" CONTENT="ALL">
+		<META NAME="ROBOTS" CONTENT="INDEX,NOFOLLOW">
+		<META NAME="ROBOTS" CONTENT="NOINDEX,FOLLOW">
+		<META NAME="ROBOTS" CONTENT="NONE"> 
+		
+		
+		<!-- Icons -->
+		<link rel="shortcut icon" href= "assets/icon.png">
+		<link rel="apple-touch-icon-precomposed" href="assets/icon.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/icon.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/icon.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icon.png" />
+		<link rel="apple-touch-startup-image" href="assets/iosSplash.png">
+		
+		<!-- CSS -->
+		<link rel='stylesheet/less' type='text/css' href='css/nrd.radio.less'/>
+
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		
+		<!-- Frameworks -->
+		<script type="text/javascript" src="js/knockout.js"></script>
+
+		<!-- nrd -->
+		<script type="text/javascript" src="js/nrd.js"></script>
+		<script type="text/javascript" src="js/nrd.radio.js"></script>
+		<script type="text/javascript">
+			var initRadio = function(){
+				$('#AMradio').nrdRadio({
+					showDetails: 	false,
+					audioSrc: 		'http://your_stream.com:your_port/listen',
+					artwork: 		'img/your_station_artwork.png',
+					autoPlay: 		false
+				});
+			}
+			$(document).ready(function() {
+				initRadio();
+			});
+		
+			less = {
+			    env: "development",
+			    async: false,
+			    fileAsync: false,
+			    poll: 1000,
+			    functions: {},
+			    dumpLineNumbers: "comments",
+			    relativeUrls: false,
+			    rootpath: ":/a.com/"
+			};
+		</script>
+
+		<script src="js/less-1.7.0.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="inform"></div>
+			<div id="AMradio"></div>
+		</div>
+	</body>
+</html>
