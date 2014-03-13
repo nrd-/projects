@@ -1,14 +1,14 @@
-Projects
+inform
 ========
+jQuery plugin for displaying 'growl' like notifications.
 
-A.M. Radio
-========
-jQuery plugin for streaming audio.
+Usage (using nrd.checkin.js as data source):
+    var info = function(msg){
+		$.fn.inform().show(msg);
+	}
 
-Connect
-========
-Experiment with Angular and Firebase.
-
-CheckIn
-========
-jQuery plugin for grabbing navigator infos.
+	$(document).ready(function() {
+		//get navigator info then inform
+		var getUserInfo = $.fn.checkIn().getInfo();
+		info(getUserInfo);
+	});
