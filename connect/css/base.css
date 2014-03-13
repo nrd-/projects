@@ -1,0 +1,40 @@
+/* --- native --- */
+body{
+	background-color: #232323;
+	color: #898989;
+	font-family: arial;
+	overflow: hidden;
+}
+input{
+	border-radius: 4px;
+	border: 0px;
+	height: 30px;
+	background-color: #676767;
+	color: #232323 !important;
+}
+hr{
+	border:0px;
+	border-bottom:1px solid #454545;
+}
+
+/* --- class --- */
+.userName{
+	color: #565656;
+}
+.moduleContainer{
+	width:30%;
+	max-height: 50%;
+	overflow: auto;
+	padding: 10px;
+	margin: 5px;
+	border-radius: 4px;
+	border: 1px solid #454545;
+}
+
+/* --- id --- */
+#userMsg{
+	width:70%;
+}
+#userName{
+	width:30%;
+}

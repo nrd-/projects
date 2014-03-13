@@ -1,0 +1,67 @@
+<html ng-app="nrd">
+  <head>
+  	<title>[nrd|connect]</title>
+  	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="HandheldFriendly" content="True">
+	<!-- <meta name="MobileOptimized" content="320"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-title" content="[nrd]">
+	<META name="apple-mobile-web-app-capable" content="yes">
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=UTF-8">
+	<META NAME="COPYRIGHT" CONTENT="0-&copy; 2011">
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="CONTENT-LANGUAGE" CONTENT="en-US">
+	<META NAME="DESCRIPTION" CONTENT="[AMradio]">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="0">
+	<META NAME="KEYWORDS" CONTENT="">
+	<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+	<META NAME="ROBOTS" CONTENT="ALL">
+	<META NAME="ROBOTS" CONTENT="INDEX,NOFOLLOW">
+	<META NAME="ROBOTS" CONTENT="NOINDEX,FOLLOW">
+	<META NAME="ROBOTS" CONTENT="NONE">
+
+	<link rel='stylesheet/less' type='text/css' href='css/theme.less'/>
+	<script src='js/jquery.js'></script>
+	<script src='js/moment.js'></script>
+    <script src='js/angular.js'></script>
+    <script src='js/firebase.js'></script>
+	<script src='js/angularfire.min.js'></script>
+	<script src='js/firebase-simple-login.js'></script>
+	<script src="http://nervousrelatives.com/js/nrd.js"></script>
+	<script src="js/base.js"></script>
+	<script>
+	  less = {
+	    env: "development",
+	    async: false,
+	    fileAsync: false,
+	    poll: 1000,
+	    functions: {},
+	    dumpLineNumbers: "comments",
+	    relativeUrls: false,
+	    rootpath: ":/a.com/"
+	  };
+	</script>
+	<script src="js/less-1.7.0.js"></script>
+  </head>
+  <body>
+  <!-- <body ng-controller="baseController"> -->
+  	<div id="popup" ng-model="popup">{{popup}}</div>
+  	<div ng-controller="baseController">
+	  	<div ng-model="authorizers"></div>
+	  	<div class="moduleContainer" ng-model="authorizer"><span id="authResults">{{authorizer}}</span></div>
+	  	<div id="msgModule">
+		  	<div class="moduleContainer">
+			    <input id="userMsg" type="text" ng-keydown="addMessage($event)" placeholder="Message..." value="">
+		  	</div>
+		  	<div class="moduleContainer">
+			    <div id="messagesDiv">
+			      <div ng-repeat="msg in messages"><hr><span class="userName">[{{msg.from}}]</span><span class="dates">[<span class="timestring">{{msg.when}}</span>]</span>: {{msg.body}}</div>
+			    </div>
+			</div>
+	  	</div>
+  	</div>
+  </body>
+</html>
