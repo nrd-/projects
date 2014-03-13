@@ -3,14 +3,13 @@ amradio
 jQuery plugin for streaming audio.
 
 Usage:
-	```
+	
     $('#AMradio').amRadio({
 					station: 	'Some Radio Station',
 					audioSrc: 	'http://some_stream_host.com:some_port/listen',
 					playBtn: 	'img/powerOff.png',
             		stopBtn: 	'img/powerOn.png'
     });
-    ```
 
 Settings
 ========
