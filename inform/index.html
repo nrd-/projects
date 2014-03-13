@@ -71,12 +71,12 @@
 		<script type="text/javascript" src="js/nrd.checkin.js"></script>
 		<script type="text/javascript">
 			var info = function(msg){
-				$.fn.inform().show(msg);
+				$().inform().show(msg);
 			}
 
 			$(document).ready(function() {
 				//get navigator info and inform
-				var getUserInfo = $.fn.checkIn().getInfo();
+				var getUserInfo = $().checkIn().getInfo();
 				info(getUserInfo);
 			});
 		

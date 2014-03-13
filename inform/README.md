@@ -5,18 +5,18 @@ jQuery plugin for displaying 'growl' like notifications.
 Usage (using nrd.checkin.js as data source):
 
     var info = function(msg){
-		$.fn.inform().show(msg);
+		$().inform().show(msg);
 	}
 
 	$(document).ready(function() {
 		//get navigator info then inform
-		var getUserInfo = $.fn.checkIn().getInfo();
+		var getUserInfo = $().checkIn().getInfo();
 		info(getUserInfo);
 	});
 
 You set placement and many other parameters with 'css':
 
-    $.fn.inform({
+    $().inform({
     			css:{'top':5,'right':5}
     }).show(msg);
 
