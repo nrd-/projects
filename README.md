@@ -11,4 +11,4 @@ Experiment with Angular and Firebase.
 
 CheckIn
 ========
-jQuery plugin for grabbing naigator infos.
+jQuery plugin for grabbing navigator infos.
