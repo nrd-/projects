@@ -12,6 +12,7 @@ Usage:
     });
 
 Currently there are quite a few unused pararmeters in amradio.js...
+
 station     : String to be displayed if showDetails is true.
 slogan 		: String to be displayed if showDetails is true *
 trackName 	: String to be displayed if showDetails is true *
