@@ -1,7 +1,7 @@
-projects
+Projects
 ========
 
-A.M. radio
+A.M. Radio
 ========
 jQuery plugin for streaming audio.
 
