@@ -1,4 +1,4 @@
-amradio
+amRadio
 ========
 jQuery plugin for streaming audio.
 
