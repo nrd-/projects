@@ -4,6 +4,7 @@
  */
 var useLogs   	= true;
 var isPlaying 	= false;
+
 (function($) {
     $.fn.amRadio = function( options ) {
     	var _this = this;
@@ -44,7 +45,7 @@ var isPlaying 	= false;
 	    	if(isPlaying===true) {
 	    		isPlaying = false;
 	    		$('#amRadioControl').attr('src',settings.playBtn);
-	    		audio.stop();
+	    		audio.pause();
 	    	}
 	    	else {
 	    		isPlaying = true;
@@ -79,6 +80,7 @@ var isPlaying 	= false;
         	}else{
         		ui += '<span style="color:'+settings.color+';font-family:'+settings.fontFamily+'">'+settings.controls+'</span>';
         	}
+
         	//do audio
         	audio = new Audio();
 
