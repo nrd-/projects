@@ -16,9 +16,9 @@ Usage (using nrd.checkin.js as data source):
 
 You set placement and many other parameters with 'css':
 
-$.fn.inform({
-			css:{'top':5,'right':5}
-}).show(msg);
+    $.fn.inform({
+    			css:{'top':5,'right':5}
+    }).show(msg);
 
 
 settings
