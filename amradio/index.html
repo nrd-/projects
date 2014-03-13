@@ -12,7 +12,7 @@
 		<meta name="apple-mobile-web-app-title" content="[A.M. radio]">
 		<META name="apple-mobile-web-app-capable" content="yes">
 		<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=UTF-8">
-		<META NAME="COPYRIGHT" CONTENT="0-&copy; 2011">
+		<META NAME="COPYLEFT" CONTENT="0-&copy; 2011">
 		<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 		<META HTTP-EQUIV="CONTENT-LANGUAGE" CONTENT="en-US">
 		<META NAME="DESCRIPTION" CONTENT="[AMradio]">
@@ -23,7 +23,6 @@
 		<META NAME="ROBOTS" CONTENT="INDEX,NOFOLLOW">
 		<META NAME="ROBOTS" CONTENT="NOINDEX,FOLLOW">
 		<META NAME="ROBOTS" CONTENT="NONE"> 
-		
 		
 		<!-- Icons -->
 		<link rel="shortcut icon" href= "assets/icon.png">
@@ -42,14 +41,15 @@
 		<!-- nrd -->
 		<script type="text/javascript" src="js/nrd.js"></script>
 		<script type="text/javascript" src="js/nrd.amradio.js"></script>
+
 		<script type="text/javascript">
 			var initRadio = function(){
 				$('#AMradio').amRadio({
-					showDetails: 	false,
+					showDetails: 	true,
 					audioSrc: 		'http://your_streaming_server:your_port/listen',
 					playBtn: 		'img/powerOff.png',
 					stopBtn: 		'img/powerOn.png',
-					autoPlay: 		false
+					autoPlay: 		true
 				});
 			}
 			$(document).ready(function() {

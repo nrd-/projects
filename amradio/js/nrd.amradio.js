@@ -4,7 +4,6 @@
  */
 var useLogs   	= true;
 var isPlaying 	= false;
-
 (function($) {
     $.fn.amRadio = function( options ) {
     	var _this = this;
@@ -72,21 +71,26 @@ var isPlaying 	= false;
 
 		    //build ui
 		    var ui='';
-        	if(settings.showDetails) ui += '<span style="color:'+settings.color+';font-family:'+settings.fontFamily+'">'+settings.station+'<br>'+settings.audioSrc+'</span><br>';
+        	if(settings.showDetails) ui += '<span style="color:'+settings.color+';font-family:'+settings.fontFamily+'">'+settings.station+'<br>'+settings.audioSrc+'</span><br><br>';
         	if(settings.artwork) ui += '<div class="amRadioArtworkContainer"><img src="'+settings.artwork+'"/></div><br>';
         	if(settings.playBtn && settings.stopBtn){
-        		var controlBtn = '<img id="amRadioControl" src="'+settings.playBtn+'" onclick="$(this).parent().amRadio.togglePlay()"/>';
+        		var controlBtn = '<img id="amRadioControl" src="';
+        		if(settings.autoPlay === false){
+        			controlBtn += settings.playBtn+'" onclick="$(this).parent().amRadio.togglePlay()"/>';
+        		}else{
+        			controlBtn += settings.stopBtn+'" onclick="$(this).parent().amRadio.togglePlay()"/>';
+        		}
         		ui += controlBtn;
         	}else{
         		ui += '<span style="color:'+settings.color+';font-family:'+settings.fontFamily+'">'+settings.controls+'</span>';
         	}
-
+        	
         	//do audio
         	audio = new Audio();
 
         	if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg")){
 				audio.src = settings.audioSrc;
-				if(settings.autoPlay == true) audio.play();
+				if(settings.autoPlay == true) audio.play(); 
 
 				//errors
 				audio.addEventListener('error', function failed(e) {
