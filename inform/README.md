@@ -14,6 +14,13 @@ Usage (using nrd.checkin.js as data source):
 		info(getUserInfo);
 	});
 
+You set placement and many other parameters with 'css':
+
+$.fn.inform({
+			css:{'top':5,'right':5}
+}).show(msg);
+
+
 settings
 ========
 There are a fair amount of defaults to play with...
