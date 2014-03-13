@@ -3,6 +3,7 @@ inform
 jQuery plugin for displaying 'growl' like notifications.
 
 Usage (using nrd.checkin.js as data source):
+    
     var info = function(msg){
 		$.fn.inform().show(msg);
 	}
