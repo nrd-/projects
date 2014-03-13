@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>[nrdInform]</title>
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="HandheldFriendly" content="True">
+		<!-- <meta name="MobileOptimized" content="320"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-title" content="[nrdInform]">
+		<META name="apple-mobile-web-app-capable" content="yes">
+		<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=UTF-8">
+		<META NAME="COPYRIGHT" CONTENT="0-&copy; 2011">
+		<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+		<META HTTP-EQUIV="CONTENT-LANGUAGE" CONTENT="en-US">
+		<META NAME="DESCRIPTION" CONTENT="[AMradio]">
+		<META HTTP-EQUIV="EXPIRES" CONTENT="0">
+		<META NAME="KEYWORDS" CONTENT="">
+		<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+		<META NAME="ROBOTS" CONTENT="ALL">
+		<META NAME="ROBOTS" CONTENT="INDEX,NOFOLLOW">
+		<META NAME="ROBOTS" CONTENT="NOINDEX,FOLLOW">
+		<META NAME="ROBOTS" CONTENT="NONE"> 
+		
+		<!-- Icons -->
+		<link rel="shortcut icon" href= "assets/icon.png">
+		<link rel="apple-touch-icon-precomposed" href="assets/icon.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/icon.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/icon.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icon.png" />
+		<link rel="apple-touch-startup-image" href="assets/iosSplash.png">
+
+		<!-- jQuery -->
+		<script src="js/jquery-1.3.2.js"></script>
+		
+		<style>
+			body{
+				background:			#dc0101;
+				font-family:		'Arial';
+				font-size:			10;
+				font-weight:		normal;
+				font-style:			normal;
+				color:				#fff;
+				border:				0px solid #232323;
+				border-radius:		3;
+				-moz-border-radius:	3;
+			}
+			#inform{
+				border-radius: 		3px;
+				background-color: 	#562323;
+				color: 				#dcdcdc;
+				position: 			fixed;
+				font-size:			10;
+				right: 				5px;
+				width: 				150px;
+				height: 			auto;
+				opacity: 			0.0;
+				min-height: 		30px;
+				padding-top: 		auto;
+				border:             0px solid #000;
+				text-align:         center;
+				padding:            auto;
+			}
+		</style>
+
+		<!-- nrd -->
+		<script type="text/javascript" src="js/nrd.js"></script>
+		<script type="text/javascript" src="js/nrd.inform.js"></script>
+		<script type="text/javascript" src="js/nrd.checkin.js"></script>
+		<script type="text/javascript">
+			var info = function(msg){
+				$.fn.inform().show(msg);
+			}
+
+			$(document).ready(function() {
+				//get navigator info and inform
+				var getUserInfo = $.fn.checkIn().getInfo();
+				info(getUserInfo);
+			});
+		
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
