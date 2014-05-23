@@ -6,7 +6,7 @@
   \ \ \_\ \ \_/ \_/ \ \ \ \ \_ /\ \L\ \/\ \__/\ \ \//\ \L\.\_\ \ \_/\ \__/ \ \ \ \ \
    \ \__\\ \___x___/'\ \_\ \__\\ `\____\ \____\\ \_\\ \__/.\_\\ \__\ \____\ \ \_\ \_\
     \/__/ \/__//__/   \/_/\/__/ \/_____/\/____/ \/_/ \/__/\/_/ \/__/\/____/  \/_/\/_/
-	twitScratch by nrd [cc] 2014
+	twitScratch by nrd [cc] 2014 http://nervousrelatives.com
 
 	change and use it for whatever and all that as long as 
 	everyone else can as well without paying anything or being 
