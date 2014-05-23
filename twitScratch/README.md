@@ -3,6 +3,7 @@ twitScratch
 jQuery plugin for customizing twitter feeds.
 
 Usage:
+```
     $('document').ready(function(){
 	    var tweets = new $.twitScratch(
 			$('#tweets'),{
@@ -12,4 +13,4 @@ Usage:
 			}
 		);
 	});
-
+```
