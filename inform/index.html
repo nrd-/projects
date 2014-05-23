@@ -37,7 +37,7 @@
 		
 		<style>
 			body{
-				background:			#dc0101;
+				background:			#564534;
 				font-family:		'Arial';
 				font-size:			10;
 				font-weight:		normal;
@@ -62,6 +62,8 @@
 				border:             0px solid #000;
 				text-align:         center;
 				padding:            auto;
+				overflow-x: 		hidden;
+				overflow-y: 		auto;
 			}
 		</style>
 
@@ -70,19 +72,19 @@
 		<script type="text/javascript" src="js/nrd.inform.js"></script>
 		<script type="text/javascript" src="js/nrd.checkin.js"></script>
 		<script type="text/javascript">
-			var info = function(msg){
-				$().inform().show(msg);
+			var info = function(msg,msgCss,msgDelay){
+				$().inform({delay:msgDelay,css:msgCss}).show(msg);
 			}
 
 			$(document).ready(function() {
 				//get navigator info and inform
 				var getUserInfo = $().checkIn().getInfo();
-				info(getUserInfo);
+				info(getUserInfo,{'right':5,'bottom':5,'font-size':12,'padding':40},10000);
 			});
 		
 		</script>
 	</head>
 	<body>
-		
+		<span style="cursor:pointer;" onclick="info('some info',{'left':5,'top':30},5000)">show some info</span>
 	</body>
 </html>

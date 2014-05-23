@@ -1,0 +1,41 @@
+body,html{
+	background: 	#333;
+	color: 			#999;
+	font-family: 	helvetica,verdana;
+	margin: 		0px !important;
+	padding:		0px !important;
+}
+
+a:link{
+	color: 			#f60;
+}
+
+a:visited{
+	color: 			#f60;
+}
+
+.heading{
+	position: 		relative;
+	display: 		block;
+	border-bottom: 	1px solid #444;
+	background: 	#222;
+	margin:			0px !important;
+	padding: 		0px !important;
+	top:			0px !important;
+}
+
+#twitterTicker{
+	position: 		relative;
+	display: 		block;
+	margin:			0px !important;
+	padding: 		10px !important;
+}
+
+#twitterData{
+	position: 		absolute;	
+	top: 			-1000px;
+}
+
+.follow{
+	font-size:		9px;
+}
