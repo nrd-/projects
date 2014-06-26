@@ -1,0 +1,169 @@
+@charset "utf-8";
+@import "variables.less";
+
+/* --- native --- */
+a{
+    color: @lightGrey;   
+}
+body{
+	background-color:   @darkGrey;
+	color:              @lightGrey;
+	font-family:        @fontFamily;
+	overflow:           hidden;
+}
+input{
+	border-radius:      @borderRadius;
+	border:             0px;
+	height:             @inputHeight;
+	background-color:   @mediumGrey;
+	color:              @lightGrey;
+}
+input[type="button"]{
+    cursor: pointer;   
+}
+hr{
+	border:             0px;
+	border-bottom:      1px solid @lightGrey;
+}
+
+/* --- class --- */
+.userName{
+	color:              @mediumGrey;
+}
+.invalid{
+    color:              @invalid;
+}
+.valid{
+    color:              @valid;
+}
+.pending{
+    color:              @pending;
+}
+.moduleContainer{
+	width:              90%;
+	max-height:         50%;
+	overflow:           auto;
+	padding:            10px;
+	margin:             auto;
+    margin-bottom:      5px;
+	border-radius:      @borderRadius;
+	border:             @borderThin @borderStyle @borderColor;
+}
+
+/* --- id --- */
+#userMsg{
+	width:              70%;
+}
+#userName{
+	width:              30%;
+}
+
+/* --- plugins --- */
+#popup{
+    position: 			fixed;
+    left: 				0px;
+    top: 				0px;
+    width: 				100%;
+    height: 			100%;
+    margin: 			0px;
+    padding: 			0px;
+    z-index: 			1000;
+    text-align: 		center;
+    background-color: 	@noClick;
+}
+#popupWrapper{
+	position: 			relative;
+	width: 				100%;
+    height: 			100%;
+}
+#popupContainer{
+	width: 				50%;
+    height: 			80%;
+    position: 			absolute;
+    top:				0;
+    bottom: 			0;
+    left: 				0;
+    right: 				0;
+    margin: 			auto;
+    padding: 			10px;
+    background-color: 	@menuBackground;
+    border-radius: 		@borderRadius;
+}
+#popupHead{
+    font-size: 			@headingSize;
+    color: 				@mediumGrey;
+    width:  			100%;
+    height: 			20px;
+}
+#popupBody{
+    font-size: 			@fontSize;
+    color: 				@mediumGrey;
+	width:  			100%;
+    height: 			100%;
+}
+#popupFoot{
+	position: 			absolute;
+	bottom: 			0px;
+	width:  			100%;
+	height: 			20px;
+    font-size: 			@headingSize;
+    color: 				@mediumGrey;
+}
+#popupCloseBtn{
+	position: 			absolute;
+	top: 				0;
+	right:				0;
+	width:  			20;
+	height: 			20;
+	z-index: 			2;
+	padding: 			0 !important;
+	margin: 			5;
+    font-size: 			@fontSize;
+    color: 				@mediumGrey;
+}
+#userProfile{
+	border:0px solid #000;
+	width:100%;
+	height:84%;
+	text-align:left;
+}
+#userProfile input[type="text"]{
+	width:100%;
+	margin-bottom: 5;
+}
+.userProfileBlock{
+	float: left;
+	
+}
+#userProfileImage{
+	width: 20%;
+}
+.imageContainer{
+	width: 120;
+	height: 120;
+	background-color: @imgContainerBg;
+	border-radius: @borderRadius;
+}
+#userProfileDetails{
+	width:80%;
+}
+.drkGrey{
+	border:             0px;
+	border-bottom:      1px solid @darkGrey;
+}
+.mdGrey{
+	border:             0px;
+	border-bottom:      1px solid @mediumGrey;
+}
+.pullLeft{
+	float: left;
+}
+.pullRight{
+	float: right;
+}
+.fillWidth{
+	width: 100%;
+}
+.padTop{
+	padding-top: 10px;
+}
