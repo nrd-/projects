@@ -20,3 +20,7 @@ Experiment with Angular and Firebase.
 inform
 ========
 jQuery plugin for displaying 'growl' like notifications.
+
+nrdGallery
+========
+jQuery photo gallery plugin

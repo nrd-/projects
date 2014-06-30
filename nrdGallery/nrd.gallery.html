@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+	<script type="text/javascript" src="js/nrd.gallery.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/nrd.gallery.css">
+	<script>
+		$(document).ready(function(){
+			var appConfig;
+			var loadJson = function(src){
+				var json = null;
+			    $.ajax({
+			        async: 		false,
+			        global: 	false,
+			        url: 		'data/'+src+'.json',
+			        dataType: 	"json",
+			        success: 	function (data) {
+						            json = data;
+						        }
+			    });
+			    return json;
+			};
+
+			if(appConfig = loadJson('nrd.gallery.config')){
+				$('body').nrdGallery({
+					media:appConfig.data[0].gallery
+				});
+			}
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>
