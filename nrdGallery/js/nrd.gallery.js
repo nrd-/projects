@@ -1,10 +1,13 @@
+var iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
+
 (function($) {
     $.fn.nrdGallery = function( options ) {
         var settings = $.extend({
             title       : 'nrd[gallery]',
             galleryClass: 'nrdGallery',
             media       : [{}], 
-            maxBlur     : 10,    
+            maxBlur     : 10,   
+            showHeader  : true, 
             complete 	: null//complete    : function() { alert( 'Done!' ) }
         }, options);
 
@@ -72,10 +75,14 @@
 
         return this.each( function() {
 		    if ( $.isFunction( settings.complete ) ) settings.complete.call( this );
-
+            if(iOS===true) $('#'+settings.galleryClass).addClass('fluid-scroll');
+            var ui = '';
+            
             //build DOM
-		    var ui = '<div class="'+settings.galleryClass+'"><div class="galleryHeader">'+settings.title+'</div>\
-                      <div class="'+settings.galleryClass+'Slides">';
+            if(settings.showHeader===true){
+		          ui += '<div class="'+settings.galleryClass+'"><div class="galleryHeader">'+settings.title+'</div>';
+            }
+            ui += '<div class="'+settings.galleryClass+'Slides">';
             
             $.each(settings.media,function(index,obj){
                     //format DOM
