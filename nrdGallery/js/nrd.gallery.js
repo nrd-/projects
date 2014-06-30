@@ -8,21 +8,42 @@ var iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
             media       : [{}], 
             maxBlur     : 10,   
             showHeader  : true, 
+            previews    : false,
+            autoPlay    : false,
             complete 	: null//complete    : function() { alert( 'Done!' ) }
         }, options);
 
         $.fn.slideRollOver = function(target){
-            $(target).css({'boxShadow':'0px 5px 20px 5px rgba(0,0,0,0.7)'});
+            $(target).removeClass('dropShadow-unfocus').addClass('dropShadow-focus');
+            if(settings.previews===true) $.fn.openPreview();
         };
 
         $.fn.slideRollOut = function(target){
-            $(target).css({'boxShadow':'0px 5px 10px -5px rgba(0,0,0,0.5)'});
+            $(target).removeClass('dropShadow-focus').addClass('dropShadow-unfocus');
+            if(settings.previews===true) $.fn.closePreview();
+        };
+
+        $.fn.fullImageResize = function(){
+
+        };
+
+        $.fn.thumbImageResize = function(){
+
+        };
+
+        $.fn.openPreview = function(){
+
+        };
+
+        $.fn.closePreview = function(){
+
         };
 
         $.fn.showFull = function(src){
             var fullViewer = settings.galleryClass+'fullViewer';
             $('#'+fullViewer).css({'display':'block'});
             $('#'+fullViewer).css({'background':'rgba(0,0,0,0.7) url('+src+') center center fixed no-repeat'});
+            //$('#'+fullViewer).css({'backgroundSize':'auto 100%'});
             
             $.fn.blurGallery();
 
@@ -77,7 +98,7 @@ var iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
 		    if ( $.isFunction( settings.complete ) ) settings.complete.call( this );
             if(iOS===true) $('#'+settings.galleryClass).addClass('fluid-scroll');
             var ui = '';
-            
+
             //build DOM
             if(settings.showHeader===true){
 		          ui += '<div class="'+settings.galleryClass+'"><div class="galleryHeader">'+settings.title+'</div>';

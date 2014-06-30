@@ -57,3 +57,9 @@ html,body{
   	-webkit-overflow-scrolling: touch;
 	overflow-x: 		hidden;
 }
+.dropShadow-unfocus{
+	box-shadow: 0px 5px 10px -5px rgba(0,0,0,0.5);
+}
+.dropShadow-focus{
+	box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.7);
+}
